@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1>Atualizar Imagem</h1>
+    <h4>{{livro.titulo}}</h4>
+    <div *ngIf="message !== null" class="alert alert-danger">{{message}}</div>
+    <div>
+        <input type="file" (change)="upload($event)">
+    </div>
+    <div>
+    <a [routerLink]="['/livros/',livro.id]" class="btn btn-primary">Voltar</a>
+</div>
+    <img src="{{urlImage}}" width="200" />
+</div>

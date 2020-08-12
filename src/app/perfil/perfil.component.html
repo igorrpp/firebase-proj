@@ -1,0 +1,64 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1>Meus Dados</h1>
+
+    <div *ngIf="message !== null" class="alert alert-danger">{{message}}</div>
+    
+    
+    
+    <form class="form-horizontal" [formGroup]="formGroup" (ngSubmit)="atualiza()" >
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="nome">nome</label>  
+        <div class="col-md-4">
+        <input type="text" id="nome" name="nome" 
+          formControlName="nome" class="form-control input-md" required>
+          <span class="help-block" *ngIf="formGroup.controls.nome.errors && formGroup.controls.nome.dirty">
+            nome inválido</span>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="telefone">telefone</label>  
+        <div class="col-md-4">
+        <input type="text" id="telefone" name="telefone" 
+          formControlName="telefone" class="form-control input-md" required>
+          <span class="help-block" *ngIf="formGroup.controls.telefone.errors &&
+           formGroup.controls.telefone.dirty">
+            telefone inválido</span>
+        </div>
+      </div>
+
+    
+     <div class="form-group">
+        <label class="col-md-4 control-label" for="dataNascimento">dataNascimento</label>  
+        <div class="col-md-4">
+        <input type="text" id="dataNascimento" name="dataNascimento" 
+          formControlName="dataNascimento" class="form-control input-md" required>
+          <span class="help-block" *ngIf="formGroup.controls.dataNascimento.errors && 
+          formGroup.controls.dataNascimento.dirty">data Nascimento inválido</span>
+        </div>
+      </div>
+
+          
+     <div class="form-group">
+        <label class="col-md-4 control-label" for="cpf">cpf</label>  
+        <div class="col-md-4">
+        <input type="text" id="cpf" name="cpf" 
+          formControlName="cpf" class="form-control input-md" required>
+          <span class="help-block" *ngIf="formGroup.controls.cpf.errors && 
+          formGroup.controls.cpf.dirty">
+            data Nascimento inválido</span>
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Cadastrar"></label>
+        <div class="col-md-4">
+          <button id="Cadastrar" name="Cadastrar" class="btn btn-primary"  [disabled]="formGroup.invalid">Atualizar</button>
+        </div>
+      </div>
+      </form>
+    
+    </div>

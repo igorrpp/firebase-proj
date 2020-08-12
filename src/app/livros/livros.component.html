@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1> Lista de livros</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th></th>
+
+        </tr>
+            <tr *ngFor="let livro of itens">
+                <td>{{livro.id}}</td>
+                <td>{{livro.titulo}}</td>
+                <td><a [routerLink]="['/livros/',livro.id]" class="btn btn-warning">Visualizar</a></td>
+            
+
+        </tr>
+
+    </table>
+</div>

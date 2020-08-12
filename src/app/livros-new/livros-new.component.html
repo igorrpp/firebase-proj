@@ -1,0 +1,81 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1>Livro</h1>
+    <div *ngIf="message !== null" class="alert alert-danger">{{message}}</div>
+    
+    
+    
+    <form class="form-horizontal" [formGroup]="formGroup" (ngSubmit)="onSubmit()" >
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="titulo">titulo</label>  
+        <div class="col-md-4">
+        <input type="text" id="titulo" name="titulo" 
+          formControlName="titulo" class="form-control input-md" required>
+          <span class="help-block" *ngIf="formGroup.controls.titulo.errors && formGroup.controls.titulo.dirty">
+            titulo inválido</span>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="editora">editora</label>  
+        <div class="col-md-4">
+          <input type="text" id="editora" name="editora" 
+            formControlName="editora" class="form-control input-md" required>
+            <span class="help-block" *ngIf="formGroup.controls.editora.errors && formGroup.controls.editora.dirty">
+              editora inválido</span>
+      
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="autor">autor</label>  
+        <div class="col-md-4">
+          <input type="text" id="autor" name="autor" 
+            formControlName="autor" class="form-control input-md" required>
+            <span class="help-block" *ngIf="formGroup.controls.autor.errors && formGroup.controls.autor.dirty">
+              Autor inválido</span>
+
+        </div>
+      </div>
+
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="preco">Preço</label>  
+        <div class="col-md-4">
+          <input type="text" id="preco" name="preco" 
+            formControlName="preco" class="form-control input-md" required>
+            <span class="help-block" *ngIf="formGroup.controls.preco.errors && formGroup.controls.preco.dirty">
+              Preço inválido</span>
+
+        </div>
+      </div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="resumo">Resumo</label>  
+  <div class="col-md-4">
+    <input type="text" id="resumo" name="resumo" 
+      formControlName="resumo" class="form-control input-md" required>
+      <span class="help-block" *ngIf="formGroup.controls.resumo.errors && formGroup.controls.resumo.dirty">
+        Resumo inválido</span>
+
+  </div>
+</div>
+      
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Cadastrar"></label>
+        <div class="col-md-4">
+          <button id="Cadastrar" name="Cadastrar" class="btn btn-primary"  [disabled]="formGroup.invalid">Cadastrar</button>
+        </div>
+      </div>
+      
+   
+      </form>
+    </div>
