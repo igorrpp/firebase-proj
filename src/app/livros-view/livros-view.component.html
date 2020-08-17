@@ -1,30 +1,35 @@
 <app-menu></app-menu>
 <div class="container">
 
-    <h1>Dados do livro</h1>
+    <h1>Ficha do funcionário</h1>
     <div class="row">
-        <div class="col-md-1 label">Título</div>
-        <div class="col-md-11">{{livro.titulo}}</div>
+        <div class="col-md-1 label">Nome</div>
+        <div class="col-md-11">{{livro.nome}}</div>
     </div>
 
     <div class="row">
-        <div class="col-md-1 label">Autor</div>
-        <div class="col-md-11">{{livro.autor}}</div>
+        <div class="col-md-1 label">Cargo</div>
+        <div class="col-md-11">{{livro.cargo}}</div>
     </div>
 
     <div class="row">
-        <div class="col-md-1 label">Editora</div>
-        <div class="col-md-11">{{livro.editora}}</div>
+        <div class="col-md-1 label">CPF</div>
+        <div class="col-md-11">{{livro.cpf}}</div>
     </div>
 
     <div class="row">
-        <div class="col-md-12 label">Resumo</div>
-        <div class="col-md-12">{{livro.resumo}}</div>
+        <div class="col-md-1 label">Idade</div>
+        <div class="col-md-11">{{livro.idade}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 label">Salario</div>
+        <div class="col-md-11">{{livro.salario}}</div>
     </div>
 
         <a [routerLink]="['/livros/imagem/',livro.id]" class="btn btn-primary">Atualizar Capa</a>
-        
+
         <a [routerLink]="['/livros/update/',livro.id]" class="btn btn-warning">Atualizar</a>
+
         <a [routerLink]="['/livros/delete/',livro.id]" class="btn btn-danger">Deletar</a>
         
 </div>

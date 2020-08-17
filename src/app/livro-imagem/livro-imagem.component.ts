@@ -20,7 +20,7 @@ export class LivroImagemComponent implements OnInit {
     this.route.paramMap.subscribe(resp=>{
 
       let id =resp.get('id');
-      this.Firestore.collection('livro').doc(id).snapshotChanges().subscribe(data=>{
+      this.Firestore.collection('funcionarios').doc(id).snapshotChanges().subscribe(data=>{
         this.livro = data.payload.data() as Livro;
         this.livro.id = data.payload.id;
         this.download();

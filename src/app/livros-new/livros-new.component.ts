@@ -29,7 +29,13 @@ export class LivrosNewComponent implements OnInit {
       autor: ['', [Validators.required]],
       editora: ['', [Validators.required]],
       resumo: ['', [Validators.required]],
-      preco: ['', [Validators.required]]
+      preco: ['', [Validators.required]],
+
+      cargo: ['', [Validators.required]],
+      nome: ['', [Validators.required]],
+      cpf: ['', [Validators.required]],
+      idade: ['', [Validators.required]],
+      salario: ['', [Validators.required]],
    
 
     })

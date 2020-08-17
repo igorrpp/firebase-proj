@@ -1,16 +1,26 @@
 <app-menu></app-menu>
 <div class="container">
-    <h1> Lista de livros</h1>
+    <h1> Lista de funcionários</h1>
     <table class="table">
         <tr>
             <th>ID</th>
-            <th>Titulo</th>
+            <th>CARGO</th>
+            <th>NOME</th>
+            <th>CPF</th>
+            <th>IDADE</th>
+            <th>SALARIO</th>
+            
             <th></th>
 
         </tr>
             <tr *ngFor="let livro of itens">
                 <td>{{livro.id}}</td>
-                <td>{{livro.titulo}}</td>
+                <td>{{livro.cargo}}</td>
+                <td>{{livro.nome}}</td>
+                <td>{{livro.cpf}}</td>
+                <td>{{livro.idade}}</td>
+                <td>{{livro.salario}}</td>
+            
                 <td><a [routerLink]="['/livros/',livro.id]" class="btn btn-warning">Visualizar</a></td>
             
 

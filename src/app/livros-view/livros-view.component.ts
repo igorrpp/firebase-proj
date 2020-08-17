@@ -17,7 +17,7 @@ export class LivrosViewComponent implements OnInit {
   ngOnInit(): void {
    this.route.paramMap.subscribe(data=>{
      let id = data.get('id');
-     this.firestore.collection('livro').doc(id).snapshotChanges().subscribe(data=>{
+     this.firestore.collection('funcionarios').doc(id).snapshotChanges().subscribe(data=>{
        this.livro =  data.payload.data() as  Livro;
        this.livro.id = data.payload.id;
        

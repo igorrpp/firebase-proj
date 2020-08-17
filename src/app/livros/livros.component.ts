@@ -14,7 +14,7 @@ export class LivrosComponent implements OnInit {
   constructor(private firestore : AngularFirestore) { }
 
   ngOnInit(): void {
-    this.firestore.collection('livro').snapshotChanges().subscribe(data=>{
+    this.firestore.collection('funcionarios').snapshotChanges().subscribe(data=>{
       console.log(data);
 
       data.map(obj=>{

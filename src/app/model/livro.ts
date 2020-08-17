@@ -5,5 +5,11 @@ export class Livro{
     editora : string;
     preco : number;
     resumo : string;
+    
+    cargo : string;
+    nome : string;
+    cpf : string;
+    idade : number;
+    salario : string;
 
 }

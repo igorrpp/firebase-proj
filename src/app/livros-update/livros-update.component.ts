@@ -30,6 +30,13 @@ export class LivrosUpdateComponent implements OnInit {
         this.formGroup.controls['editora'].setValue(livro.editora);
         this.formGroup.controls['preco'].setValue(livro.preco);
         this.formGroup.controls['resumo'].setValue(livro.resumo);
+
+        this.formGroup.controls['cargo'].setValue(livro.cargo);
+        this.formGroup.controls['nome'].setValue(livro.nome);
+        this.formGroup.controls['cpf'].setValue(livro.cpf);
+        this.formGroup.controls['idade'].setValue(livro.idade);
+        this.formGroup.controls['salario'].setValue(livro.salario);
+    
     
       })
     });
@@ -43,7 +50,14 @@ export class LivrosUpdateComponent implements OnInit {
       autor: ['', [Validators.required]],
       editora: ['', [Validators.required]],
       resumo: ['', [Validators.required]],
-      preco: ['', [Validators.required]]
+      preco: ['', [Validators.required]],
+
+      cargo : ['',[Validators.required]],
+      nome : ['',[Validators.required]],
+      cpf : ['',[Validators.required]],
+      idade : ['',[Validators.required]],
+      salario : ['',[Validators.required]],
+
    
 
     })
